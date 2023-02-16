@@ -8,6 +8,7 @@ const printError = (error) => {
 const printSuccess = (message) => {
   console.log(`${chalk.bgGreen(` SUCCESS `)} ${message}`);
 };
+// 0fd0e0e255958e88fc5f8b1cc04dcea4
 
 const printHelp = () => {
   console.log(
