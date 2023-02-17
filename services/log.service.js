@@ -8,7 +8,6 @@ const printError = (error) => {
 const printSuccess = (message) => {
   console.log(`${chalk.bgGreen(` SUCCESS `)} ${message}`);
 };
-// 0fd0e0e255958e88fc5f8b1cc04dcea4
 
 const printHelp = () => {
   console.log(
@@ -21,4 +20,15 @@ const printHelp = () => {
   );
 };
 
-export { printError, printSuccess, printHelp };
+const printWeather = (res, icon) => {
+  console.log(
+    dedent(`${chalk.bgBlue(' WEATHER ')} Погода в городе ${res.name}
+    ${icon}     ${res.weather[0].description}
+    Температура: ${res.main.temp} (ощущается как ${res.main.feels_like})
+    Влажность: ${res.main.humidity}
+    Скорость ветра: ${res.wind.speed}
+  `)
+  );
+};
+
+export { printError, printSuccess, printHelp, printWeather };
